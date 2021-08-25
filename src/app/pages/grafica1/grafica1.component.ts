@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { fileItem } from 'src/app/models/filetiem';
+import { CargaImagenesService } from '../../services/carga-imagenes.service';
 
 @Component({
   selector: 'app-grafica1',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Grafica1Component implements OnInit {
 
-  constructor() { }
+  estaSobreElemento = false;
+  archivos: fileItem[] = [];
+  fila:any[]=[];
+
+  constructor(public _cargaImagenes: CargaImagenesService) {
+    console.log('prueba de angular')
+  }
 
   ngOnInit(): void {
+  }
+  cargaImagenes() {
+    this._cargaImagenes.cargarImagenes(this.archivos)
+  }
+  mouseSobreElemento(event: any) {
+    console.log(event)
+
+  }
+  limpiarArchivos(){
+    this.archivos=[];
   }
 
 }
