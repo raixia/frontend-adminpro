@@ -6,6 +6,7 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { PagesModule } from './pages/pages.module';
 import { AuthModule } from './auth/auth.module';
 import { CargaImagenesService } from './services/carga-imagenes.service';
+import { PipesPipe } from './pipes/pipes.pipe';
 
 
 
@@ -13,6 +14,7 @@ import { CargaImagenesService } from './services/carga-imagenes.service';
   declarations: [
     AppComponent,
     NopagefoundComponent,
+    PipesPipe,
   ],
   imports: [
     
