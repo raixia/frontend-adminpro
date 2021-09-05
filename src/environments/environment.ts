@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   base_url:'https://appcomerces.herokuapp.com/api',
-  heroku:'https://appcomerces.herokuapp.com/api'
+  heroku:'https://appcomerces.herokuapp.com/'
 };
 
 /*
