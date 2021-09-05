@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { NgDropFilesDirective } from '../directives/ng-drop-files.directive';
 import { PerfilComponent } from './perfil/perfil.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UsuariosComponent } from './matenimientos/usuarios/usuarios.component';
 @NgModule({
   declarations: [
     ProgressComponent,
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DashboardComponent,
     PagesComponent,
     NgDropFilesDirective,
-    PerfilComponent
+    PerfilComponent,
+    UsuariosComponent
   ],
   imports: [
     RouterModule,

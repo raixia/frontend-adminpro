@@ -16,6 +16,15 @@ export class SidebarService {
         { titulo: 'ProgressBar', url: 'progress' },
         { titulo: 'grafica1', url: 'grafica1' }
       ]
+    },
+    {
+      titulo: 'Mantenimiento',
+      icono: 'mdi mdi-folder-lock-open',
+      submenu: [
+        { titulo: 'usuarios', url: 'usuarios' },
+        { titulo: 'categorias', url: 'categorias' },
+        { titulo: 'productos', url: 'categorias' },
+      ]
     }
   ]
 }

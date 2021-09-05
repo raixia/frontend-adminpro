@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <input type="text" class="form-control" placeholder="buscar Usuario" #txtTermino
+                    (keyup)="buscar(txtTermino.value)">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row animated fadeIn fast" *ngIf="cargando">
+    <div class="col-12">
+        <div class="alert alert-info text-center" role="alert">
+            <h4 class="alert-heading">Cargando</h4>
+            <i class="fa fa-spin fa-refresh fa-2x"></i>
+            <p class="mb-0">Por favor espere</p>
+        </div>
+    </div>
+</div>
+<div class="row animated fadeIn fast" *ngIf="!cargando">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Bordered Table</h4>
+                <h6 class="card-subtitle">Add<code>.table-bordered</code>for borders on all sides of the table and
+                    cells.</h6>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>img</th>
+                                <th>usuarios</th>
+                                <th>correo</th>
+                                <th>role</th>
+                                <th>estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let user of usuarios">
+                                <td><img [src]="user.imagenUrl" class="img-fluid dimensionimg"></td>
+                                <td>
+                                    <p>{{user.nombre}}</p>
+                                </td>
+                                <td>{{user.correo}}</td>
+                                <td>
+                                    <select name="" id="" [(ngModel)]="user.rol" (change)="cambiarRoles(user)" class="form-control">
+                                        <option value="ADMIN_ROLE">ADMIN</option>
+                                        <option value="VENTAS_ROLE">VENTAS</option>
+                                        <option value="INVITADO_ROLE">INVITADO</option>
+                                    </select>
+
+                                </td>
+                                <td>
+                                    <select name="" id="" [(ngModel)]="user.estado" (change)="cambiarEstado(user)"  class="form-control">
+                                        <option value="true">activo</option>
+                                        <option value="false">inactivo</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <div *ngIf="txtTermino.value.length===0">
+                            <button (click)="cambiarPagina(-5)" type="button"
+                                class="btn btn-outline-primary">Atras</button>
+                            <button (click)="cambiarPagina(5)" type="button"
+                                class="btn btn-outline-primary">Siguiente</button>
+                        </div>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  base_url:'http://localhost:4000/api'
+  base_url:'https://appcomerces.herokuapp.com/api',
+  heroku:'https://appcomerces.herokuapp.com/api'
 };
 
 /*

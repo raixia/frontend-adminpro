@@ -17,6 +17,7 @@ export class PerfilComponent implements OnInit {
   public imagenSubir: any
   public imgTemp:any=null
   public botonimg:boolean=false
+
   public perfilForm: FormGroup = new FormGroup({ })
   constructor(private usuarioServices: UsuariosService, private fb: FormBuilder, private fileUploadService: FileuploadService) {
 
