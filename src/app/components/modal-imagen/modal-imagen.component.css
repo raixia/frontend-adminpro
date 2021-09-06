@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+.fondo-modal{
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+}
+.oculto{
+    display: none;
+}

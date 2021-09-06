@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { usuario } from 'src/app/models/usuario';
 import { FileuploadService } from 'src/app/services/fileupload.service';
+import { ModalImagenService } from 'src/app/services/modal-imagen.service';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 import Swal from 'sweetalert2';
 
@@ -19,7 +20,7 @@ export class PerfilComponent implements OnInit {
   public botonimg:boolean=false
 
   public perfilForm: FormGroup = new FormGroup({ })
-  constructor(private usuarioServices: UsuariosService, private fb: FormBuilder, private fileUploadService: FileuploadService) {
+  constructor(private usuarioServices: UsuariosService, private fb: FormBuilder, private fileUploadService: FileuploadService,modalImagenService:ModalImagenService) {
 
     this.usuario = usuarioServices.usuario
     

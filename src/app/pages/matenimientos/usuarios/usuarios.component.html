@@ -38,7 +38,7 @@
                         </thead>
                         <tbody>
                             <tr *ngFor="let user of usuarios">
-                                <td><img [src]="user.imagenUrl" class="img-fluid dimensionimg"></td>
+                                <td><img (click)="abrirModal(user)" [src]="user.imagenUrl" class="img-fluid dimensionimg"></td>
                                 <td>
                                     <p>{{user.nombre}}</p>
                                 </td>

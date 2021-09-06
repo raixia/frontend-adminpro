@@ -21,9 +21,9 @@ export class usuario {
     get imagenUrl(){
         
         if(!this.img){
-            return  'https://laverdadnoticias.com/__export/1619798871248/sites/laverdad/img/2021/04/30/series_anime_kawaii_recomendaciones.jpg_2039590105.jpg'
+            return  'https://png.pngtree.com/png-clipart/20190610/original/pngtree-userpeoplelinear-iconuser-png-image_1859764.jpg'
         }else if(this.img?.length==0){
-            return 'https://laverdadnoticias.com/__export/1619798871248/sites/laverdad/img/2021/04/30/series_anime_kawaii_recomendaciones.jpg_2039590105.jpg'
+            return 'https://png.pngtree.com/png-clipart/20190610/original/pngtree-userpeoplelinear-iconuser-png-image_1859764.jpg'
         }else{
             return this.img![0]
         }
